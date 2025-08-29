@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia Mecânica - Tudo sobre o curso e a profissão</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin: 1.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #fdbb2d;
+        }
+        
+        h3 {
+            color: #b21f1f;
+            margin: 1.2rem 0 0.8rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        nav {
+            background-color: #1a2a6c;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #fdbb2d;
+            color: #1a2a6c;
+        }
+        
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            flex: 1 1 300px;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #1a2a6c;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #1a2a6c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            padding: 1.5rem;
+            border-left: 4px solid #fdbb2d;
+            margin: 1.5rem 0;
+        }
+        
+        footer {
+            background-color: #1a2a6c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Engenharia Mecânica</h1>
+            <p>Tudo sobre o curso e a profissão</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre o Curso</a></li>
+            <li><a href="#grade">Grade Curricular</a></li>
+            <li><a href="#profissao">A Profissão</a></li>
+            <li><a href="#mercado">Mercado de Trabalho</a></li>
+            <li><a href="#faculdades">Melhores Faculdades</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre o Curso de Engenharia Mecânica</h2>
+            <p>Engenharia Mecânica é um dos cursos mais tradicionais e abrangentes da área de engenharia. Ele forma profissionais capazes de conceber, projetar, analisar, fabricar e manter sistemas mecânicos dos mais simples aos mais complexos.</p>
+            
+            <div class="highlight">
+                <p>O curso tem duração média de 5 anos (10 semestres) e combina disciplinas teóricas com muitas horas de atividades práticas em laboratórios e projetos.</p>
+            </div>
+            
+            <h3>O que se estuda em Engenharia Mecânica?</h3>
+            <p>O engenheiro mecânico estuda os princípios da conversão de energia, processos de fabricação, materiais, controle e automação, entre outros temas. A formação inclui:</p>
+            <ul>
+                <li>Ciências básicas: matemática, física, química</li>
+                <li>Ciências da engenharia: termodinâmica, mecânica dos fluidos, resistência dos materiais</li>
+                <li>Tecnologias de fabricação: usinagem, soldagem, fundição</li>
+                <li>Projeto mecânico: elementos de máquinas, desenho técnico</li>
+                <li>Automação e controle: robótica, CLP, sistemas automatizados</li>
+                <li>Gestão: administração, economia, engenharia de produção</li>
+            </ul>
+        </section>
+        
+        <section id="grade">
+            <h2>Grade Curricular Típica</h2>
+            <p>A grade curricular pode variar entre as instituições, mas geralmente segue esta estrutura:</p>
+            
+            <h3>Primeiro e Segundo anos (Ciclo Básico)</h3>
+            <ul>
+                <li>Cálculo Diferencial e Integral</li>
+                <li>Física Geral</li>
+                <li>Química Geral</li>
+                <li>Algoritmos e Programação</li>
+                <li>Desenho Técnico</li>
+                <li>Geometria Analítica e Álgebra Linear</li>
+                <li>Mecânica Geral</li>
+            </ul>
+            
+            <h3>Terceiro e Quarto anos (Formação Específica)</h3>
+            <ul>
+                <li>Termodinâmica</li>
+                <li>Mecânica dos Fluidos</li>
+                <li>Resistência dos Materiais</li>
+                <li>Ciência dos Materiais</li>
+                <li>Processos de Fabricação</li>
+                <li>Elementos de Máquinas</li>
+                <li>Vibrações Mecânicas</li>
+                <li>Transferência de Calor</li>
+            </ul>
+            
+            <h3>Quinto ano (Aprofundamento e Projeto Final)</h3>
+            <ul>
+                <li>Disciplinas eletivas (especialização)</li>
+                <li>Estágio Supervisionado</li>
+                <li>Trabalho de Conclusão de Curso (TCC)</li>
+                <li>Projetos Integradores</li>
+            </ul>
+        </section>
+        
+        <section id="profissao">
+            <h2>A Profissão de Engenheiro Mecânico</h2>
+            <p>O engenheiro mecânico é um profissional versátil que atua em diversas áreas da indústria. Suas principais responsabilidades incluem:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>Projetista Mecânico</h3>
+                    <p>Desenvolve projetos de máquinas, equipamentos, veículos e sistemas mecânicos em geral, utilizando softwares de CAD/CAE.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Produção e Fabricação</h3>
+                    <p>Planeja, gerencia e otimiza processos de produção, seleciona materiais e define métodos de fabricação.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Manutenção Industrial</h3>
+                    <p>Implanta e gerencia programas de manutenção preventiva, preditiva e corretiva em equipamentos industriais.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Pesquisa e Desenvolvimento</h3>
+                    <p>Realiza pesquisas para desenvolver novos produtos, materiais e processos tecnológicos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Gestão de Energia</h3>
+                    <p>Projeta e gerencia sistemas de energia, incluindo fontes renováveis, eficiência energética e cogeração.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Automação Industrial</h3>
+                    <p>Projeta, implanta e mantém sistemas automatizados, robóticos e de controle de processos industriais.</p>
+                </div>
+            </div>
+            
+            <h3>Habilidades Necessárias</h3>
+            <ul>
+                <li>Raciocínio lógico e matemático</li>
+                <li>Capacidade analítica e de resolução de problemas</li>
+                <li>Visão espacial e criatividade</li>
+                <li>Conhecimento de softwares de engenharia (CAD, CAE, CAM)</li>
+                <li>Capacidade de trabalhar em equipe multidisciplinar</li>
+                <li>Boa comunicação oral e escrita</li>
+            </ul>
+        </section>
+        
+        <section id="mercado">
+            <h2>Mercado de Trabalho</h2>
+            <p>O mercado para engenheiros mecânicos é amplo e diversificado, com oportunidades em diversos setores:</p>
+            
+            <h3>Principais Setores de Atuação</h3>
+            <ul>
+                <li>Indústria automotiva e automotiva</li>
+                <li>Indústria aeronáutica e aeroespacial</li>
+                <li>Indústria de energia (petróleo, gás, renováveis)</li>
+                <li>Indústria metalúrgica e siderúrgica</li>
+                <li>Indústria química e petroquímica</li>
+                <li>Empresas de consultoria e projetos</li>
+                <li>Instituições de pesquisa e desenvolvimento</li>
+                <li>Docência e pesquisa acadêmica</li>
+            </ul>
+            
+            <h3>Remuneração</h3>
+            <p>Os salários variam conforme a experiência, região e porte da empresa:</p>
+            <ul>
+                <li>Engenheiro Júnior: R$ 4.000 - R$ 7.000</li>
+                <li>Engenheiro Pleno: R$ 7.000 - R$ 10.000</li>
+                <li>Engenheiro Sênior: R$ 10.000 - R$ 15.000+</li>
+                <li>Gerentes e diretores: R$ 15.000 - R$ 25.000+</li>
+            </ul>
+            <p>O piso salarial para engenheiros é definido pelos CREA's regionais, geralmente em torno de 6 salários mínimos para 6 horas diárias.</p>
+            
+            <h3>Tendências do Mercado</h3>
+            <ul>
+                <li>Crescente demanda por especialistas em energias renováveis</li>
+                <li>Expansão da indústria 4.0 e manufatura aditiva (impressão 3D)</li>
+                <li>Aumento da automação industrial e robótica</li>
+                <li>Foco em eficiência energética e sustentabilidade</li>
+                <li>Desenvolvimento de veículos elétricos e autônomos</li>
+            </ul>
+        </section>
+        
+        <section id="faculdades">
+            <h2>Melhores Faculdades de Engenharia Mecânica</h2>
+            <p>Segundo o Ranking Universitário Folha (RUF) e o MEC, algumas das melhores instituições para estudar Engenharia Mecânica são:</p>
+            
+            <h3>Públicas</h3>
+            <ul>
+                <li>Universidade de São Paulo (USP)</li>
+                <li>Universidade Estadual de Campinas (UNICAMP)</li>
+                <li>Universidade Federal do Rio de Janeiro (UFRJ)</li>
+                <li>Universidade Federal de Minas Gerais (UFMG)</li>
+                <li>Universidade Federal de Santa Catarina (UFSC)</li>
+                <li>Instituto Tecnológico de Aeronáutica (ITA)</li>
+                <li>Universidade Federal do Rio Grande do Sul (UFRGS)</li>
+            </ul>
+            
+            <h3>Privadas</h3>
+            <ul>
+                <li>Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio)</li>
+                <li>Pontifícia Universidade Católica do Rio Grande do Sul (PUC-RS)</li>
+                <li>Instituto Mauá de Tecnologia</li>
+                <li>Universidade Presbiteriana Mackenzie</li>
+                <li>Centro Universitário FEI</li>
+            </ul>
+            
+            <div class="highlight">
+                <p>Importante: Verifique sempre a avaliação do curso no site do MEC (e-MEC) antes de tomar sua decisão. Acesso: <a href="http://emec.mec.gov.br" target="_blank">emec.mec.gov.br</a></p>
+            </div>
+        </section>
+        
+        <section id="faq">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+            
+            <div class="faq-item">
+                <p class="faq-question">Qual é a diferença entre Engenharia Mecânica e Engenharia Mecatrônica?</p>
+                <p>Engenharia Mecânica foca mais em projetos mecânicos, materiais, processos de fabricação e termodinâmica. Engenharia Mecatrônica é uma integração de mecânica, eletrônica e computação, com foco em sistemas automatizados e robótica.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">É preciso fazer estágio durante a graduação?</p>
+                <p>Sim, o estágio supervisionado é obrigatório para a formação do engenheiro mecânico. A maioria dos cursos exige um período de estágio (geralmente 160-300 horas) para concluir a graduação.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">Preciso de registro no CREA para trabalhar?</p>
+                <p>Sim, o registro no Conselho Regional de Engenharia e Agronomia (CREA) é obrigatório para o exercício da profissão de engenheiro no Brasil.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">Quais softwares devo aprender?</p>
+                <p>Os mais utilizados são: AutoCAD, SolidWorks, CATIA, Inventor (para projetos); ANSYS, Abaqus (para simulação); MATLAB, Python (para cálculos); SAP2000 (para estruturas).</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">A profissão está ameaçada pela automação?</p>
+                <p>Pelo contrário. A automação cria novas oportunidades para engenheiros mecânicos, especialmente na área de robótica, manutenção de sistemas automatizados e desenvolvimento de novas tecnologias.</p>
+            </div>
+            
+            <div class="faq-item">
+                <p class="faq-question">É possível fazer especializações após a graduação?</p>
+                <p>Sim, existem diversas pós-graduações (lato sensu) e mestrados/doutorados (stricto sensu) nas áreas de projeto mecânico, materiais, energia, automação, gestão industrial, entre outras.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Site Informativo sobre Engenharia Mecânica</p>
+            <p>Desenvolvido para auxiliar estudantes e interessados na área</p>
+            <p>© 2023 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
