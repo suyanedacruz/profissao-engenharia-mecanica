@@ -32,110 +32,71 @@
             color: var(--text);
             line-height: 1.7;
             font-size: 16px;
-            display: flex;
-            min-height: 100vh;
         }
         
-        /* Menu Lateral Compacto */
-        .sidebar {
-            width: 220px;
+        /* Barra de Navegação Superior */
+        .top-nav {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 1.5rem 1rem;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: 3px 0 15px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 1rem;
+            position: sticky;
+            top: 0;
             z-index: 100;
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
-        .sidebar-logo {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .sidebar-logo h2 {
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-logo h1 {
             font-size: 1.5rem;
             color: var(--accent);
-            margin-bottom: 0.3rem;
+            margin-left: 10px;
             font-family: 'Montserrat', sans-serif;
         }
         
-        .sidebar-logo p {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-        
-        .sidebar-menu {
+        .nav-menu {
+            display: flex;
             list-style: none;
-            margin-bottom: 1.5rem;
         }
         
-        .sidebar-menu li {
-            margin-bottom: 0.5rem;
+        .nav-menu li {
+            margin: 0 0.5rem;
         }
         
-        .sidebar-menu a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            display: block;
-            padding: 0.7rem 1rem;
-            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
             transition: all 0.3s ease;
             font-size: 0.95rem;
+            white-space: nowrap;
         }
         
-        .sidebar-menu a:hover, .sidebar-menu a.active {
+        .nav-menu a:hover, .nav-menu a.active {
             background: rgba(253, 187, 45, 0.9);
             color: var(--primary);
         }
         
-        .sidebar-menu i {
-            margin-right: 10px;
-            width: 20px;
-            text-align: center;
-            font-size: 1rem;
-        }
-        
-        .sidebar-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-        }
-        
-        .sidebar-info h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--accent);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-            gap: 12px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent);
-            transform: translateY(-3px);
+        .nav-menu i {
+            margin-right: 5px;
         }
         
         /* Conteúdo Principal */
         .main-content {
-            flex: 1;
-            margin-left: 220px;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2rem;
         }
         
@@ -361,7 +322,6 @@
             text-align: center;
             padding: 2.5rem;
             margin-top: 3rem;
-            border-radius: 12px;
         }
         
         .footer-content {
@@ -373,48 +333,37 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Responsividade */
-        @media (max-width: 1100px) {
-            .sidebar {
-                width: 200px;
-            }
-            
-            .main-content {
-                margin-left: 200px;
-            }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 1.5rem;
         }
         
+        .footer-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Responsividade */
         @media (max-width: 900px) {
-            body {
+            .nav-container {
                 flex-direction: column;
             }
             
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                padding: 1.2rem;
-            }
-            
-            .main-content {
-                margin-left: 0;
-                padding: 1.5rem;
-            }
-            
-            .sidebar-menu {
-                display: flex;
+            .nav-menu {
+                margin-top: 1rem;
                 flex-wrap: wrap;
-                gap: 8px;
                 justify-content: center;
             }
             
-            .sidebar-menu li {
-                margin-bottom: 0;
-            }
-            
-            .sidebar-menu a {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.9rem;
+            .nav-menu li {
+                margin: 0.3rem;
             }
             
             .hero h1 {
@@ -460,43 +409,46 @@
             .image-item {
                 flex: 1 1 100%;
             }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-menu li {
+                margin: 0.2rem 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-menu a {
+                display: block;
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Menu Lateral -->
-    <aside class="sidebar">
-        <div class="sidebar-logo">
-            <h2><i class="fas fa-cogs"></i> EngMec</h2>
-            <p>Portal de Engenharia Mecânica</p>
+    <!-- Barra de Navegação Superior -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cogs fa-2x" style="color: #fdbb2d;"></i>
+                <h1>EngMec</h1>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="active"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#sobre"><i class="fas fa-book-open"></i> Sobre</a></li>
+                <li><a href="#grade"><i class="fas fa-graduation-cap"></i> Grade</a></li>
+                <li><a href="#profissao"><i class="fas fa-briefcase"></i> Carreira</a></li>
+                <li><a href="#mercado"><i class="fas fa-chart-line"></i> Mercado</a></li>
+                <li><a href="#faculdades"><i class="fas fa-university"></i> Faculdades</a></li>
+                <li><a href="#videos"><i class="fab fa-youtube"></i> Videos</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            </ul>
         </div>
-        
-        <ul class="sidebar-menu">
-            <li><a href="#sobre" class="active"><i class="fas fa-home"></i> Início</a></li>
-            <li><a href="#sobre"><i class="fas fa-book-open"></i> Sobre o Curso</a></li>
-            <li><a href="#grade"><i class="fas fa-graduation-cap"></i> Grade Curricular</a></li>
-            <li><a href="#profissao"><i class="fas fa-briefcase"></i> A Profissão</a></li>
-            <li><a href="#mercado"><i class="fas fa-chart-line"></i> Mercado</a></li>
-            <li><a href="#faculdades"><i class="fas fa-university"></i> Faculdades</a></li>
-            <li><a href="#ingresso"><i class="fas fa-door-open"></i> Formas de Ingresso</a></li>
-            <li><a href="#estudos"><i class="fas fa-book"></i> Métodos de Estudo</a></li>
-            <li><a href="#vale-apena"><i class="fas fa-check-circle"></i> Vale a Pena?</a></li>
-            <li><a href="#videos"><i class="fab fa-youtube"></i> Canais do YouTube</a></li>
-            <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
-        </ul>
-        
-        <div class="sidebar-info">
-            <h3><i class="fas fa-info-circle"></i> Dica Rápida</h3>
-            <p>Engenharia Mecânica está entre as 5 profissões com maior empregabilidade no Brasil.</p>
-        </div>
-        
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#videos"><i class="fab fa-youtube"></i></a>
-        </div>
-    </aside>
+    </nav>
 
     <!-- Conteúdo Principal -->
     <main class="main-content">
@@ -564,7 +516,7 @@
                 <li><strong>Termodinâmica</strong> - Leis da termodinâmica, ciclos termodinâmicos e transferência de calor</li>
                 <li><strong>Mecânica dos Fluidos</strong> - Comportamento de fluidos em repouso e em movimento</li>
                 <li><strong>Resistência dos Materiais</strong> - Comportamento de materiais sob carregamento externo</li>
-                <li><strong>Ciência dos Materiais</strong> - Estrutura, propriedades и processamento de materiais</li>
+                <li><strong>Ciência dos Materiais</strong> - Estrutura, propriedades e processamento de materiais</li>
                 <li><strong>Processos de Fabricação</strong> - Técnicas de conformação, usinagem e soldagem</li>
                 <li><strong>Elementos de Máquinas</strong> - Projeto e dimensionamento de componentes mecânicos</li>
                 <li><strong>Vibrações Mecânicas</strong> - Análise e controle de vibrações em sistemas mecânicos</li>
@@ -582,7 +534,7 @@
         
         <section id="profissao">
             <h2><i class="fas fa-briefcase"></i> A Profissão de Engenheiro Mecânico</h2>
-            <p>O engenheiro mecânico é um profissional versátil que atua em diversas áreas da indústria. Suas principais responsabilidades incluem:</p>
+            <p>O engenheiro mecânico é um profissional versátil que atua em diversas áreas da indústria. Suas principais responsabilidades incluyen:</p>
             
             <div class="image-gallery">
                 <div class="image-item">
@@ -627,23 +579,6 @@
                     <p>Conhecimento em ferramentas de projeto (CAD), simulação (CAE) e manufatura (CAM), além de programação para automação e análise de dados.</p>
                 </div>
             </div>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-lightbulb"></i> Criatividade e Inovação</h3>
-                    <p>Capacidade de desenvolver soluções criativas para problemas técnicos, projetar novos produtos e melhorar sistemas existentes.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-people-carry"></i> Trabalho em Equipe</h3>
-                    <p>Habilidade de colaborar eficazmente com profissionais de diferentes áreas em projetos multidisciplinares.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-comments"></i> Comunicação</h3>
-                    <p>Capacidade de comunicar ideias técnicas de forma clara para diferentes públicos, desde técnicos até clientes и gestores.</p>
-                </div>
-            </div>
         </section>
         
         <section id="mercado">
@@ -680,23 +615,6 @@
                 </div>
             </div>
             
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-plane"></i> Setor Aeroespacial</h3>
-                    <p>Desenvolvimento de componentes e sistemas para aeronaves, satélites e veículos espaciais, com foco em materiais leves, aerodinâmica e propulsão.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-robot"></i> Automação и Robótica</h3>
-                    <p>Projeto, implantação e manutenção de sistemas automatizados, robôs industriais e linhas de produção inteligentes, com forte aplicação de Industria 4.0.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-hard-hat"></i> Consultoria e Projetos</h3>
-                    <p>Prestação de serviços especializados em diversas áreas da engenharia mecânica, desde projetos específicos até consultoria estratégica para empresas.</p>
-                </div>
-            </div>
-            
             <h3>Tendências do Mercado (2025 em diante)</h3>
             <p>O mercado de trabalho para engenheiros mecânicos está em constante evolução. Algumas tendências que devem moldar a profissão nos próximos anos:</p>
             
@@ -714,23 +632,6 @@
                 <div class="card">
                     <h3><i class="fas fa-microchip"></i> Industria 4.0 e IoT</h3>
                     <p>Integração de sistemas ciber-físicos, internet das coisas (IoT), big data e machine learning em processos industriais, criando fábricas inteligentes.</p>
-                </div>
-            </div>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-print"></i> Manufatura Aditiva</h3>
-                    <p>Popularização da impressão 3D para produção de componentes complexos, prototipagem rápida e manufatura personalizada em pequena escala.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-brain"></i> Inteligência Artificial Aplicada</h3>
-                    <p>Uso de AI para otimização de processos, manutenção preditiva, projeto generativo e controle avançado de sistemas mecânicos.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-user-cog"></i> Human-Centered Design</h3>
-                    <p>Abordagem de projeto focada na experiência do usuário, ergonomia e acessibilidade, integrando aspectos humanos aos técnicos.</p>
                 </div>
             </div>
         </section>
@@ -795,169 +696,9 @@
                 </tbody>
             </table>
             
-            <h3>Principais Instituições Públicas</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3>ITA - Instituto Tecnológico de Aeronáutica</h3>
-                    <p><strong>Destaque:</strong> Excelência em formação tecnológica com forte base teórica e aplicada, especialmente nas áreas aeroespacial e defensa.</p>
-                    <p><strong>Recomendado para:</strong> Quem busca carreira em pesquisa, desenvolvimento tecnológico ou área aeroespacial.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>USP - Universidade de São Paulo</h3>
-                    <p><strong>Destaque:</strong> Curso tradicional com ampla abrangência, forte base teórica e diversas opções de especialização.</p>
-                    <p><strong>Recomendado para:</strong> Quem busca formação generalista com possibilidade de atuação in diversas áreas.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>UFMG - Universidade Federal de Minas Gerais</h3>
-                    <p><strong>Destaque:</strong> Forte conexão com o setor industrial mineiro, especialmente automotivo e siderúrgico.</p>
-                    <p><strong>Recomendado para:</strong> Quem pretende atuar na indústria de transformação ou automotiva.</p>
-                </div>
-            </div>
-            
-            <h3>Principais Instituições Privadas</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3>FEI - Centro Universitário</h3>
-                    <p><strong>Destaque:</strong> Tradição na área de engenharia com forte ligação com o setor automotivo e boa infraestrutura laboratorial.</p>
-                    <p><strong>Recomendado para:</strong> Quem busca formação com enfoque prático e conexões com a indústria.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>Mauá - Instituto Mauá de Tecnologia</h3>
-                    <p><strong>Destaque:</strong> Excelente infraestrutura, projeto pedagógico inovador e forte inserção no mercado de trabalho.</p>
-                    <p><strong>Recomendado para:</strong> Quem valoriza formação prática com boa base teórica e proximidade com a indústria.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>PUC-Rio</h3>
-                    <p><strong>Destaque:</strong> Boa formação geral com opções de especialização e proximidade com empresas do Rio de Janeiro.</p>
-                    <p><strong>Recomendado para:</strong> Quem busca formação em engenharia com visão humanista e possibilidade de atuação em diversos setores.</p>
-                </div>
-            </div>
-            
             <div class="highlight">
                 <p><strong>Importante:</strong> Verifique sempre a avaliação do curso no site do MEC (e-MEC) antes de tomar sua decisão. Acesso: <a href="http://emec.mec.gov.br" target="_blank">emec.mec.gov.br</a></p>
             </div>
-        </section>
-        
-        <section id="ingresso">
-            <h2><i class="fas fa-door-open"></i> Formas de Ingresso nas Faculdades</h2>
-            <p>Existem diferentes formas de ingressar em um curso de Engenharia Mecânica, tanto em instituições públicas quanto privadas.</p>
-            
-            <h3>Instituições Públicas</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-file-alt"></i> SISU (Sistema de Seleção Unificada)</h3>
-                    <p>Sistema do governo federal que utiliza a nota do ENEM para selecionar estudantes para universidades públicas. É a principal forma de ingresso na maioria das instituições.</p>
-                    <p><strong>Vantagem:</strong> Isenção de mensalidades e prestígio das instituições públicas.</p>
-                    <p><strong>Desafio:</strong> Alta concorrência e necessidade de nota elevada no ENEM.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-pen-fancy"></i> Vestibular Tradicional</h3>
-                    <p>Algumas universidades ainda mantêm vestibulares próprios, além ou em substituição ao SISU. Exemplos: USP, UNICAMP e ITA.</p>
-                    <p><strong>Vantagem:</strong> Foco específico no conteúdo exigido pela instituição.</p>
-                    <p><strong>Desafio:</strong> Necessidade de preparação específica para cada vestibular.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-graduation-cap"></i> Programas de Inclusão</h3>
-                    <p>Sistemas de cotas raciais, sociais e para egressos de escola pública, que reservam vagas específicas nestes grupos.</p>
-                    <p><strong>Vantagem:</strong> Redução da nota de corte para grupos específicos.</p>
-                    <p><strong>Desafio:</strong> Necessidade de comprovar elegibilidade para as cotas.</p>
-                </div>
-            </div>
-            
-            <h3>Instituições Privadas</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-file-alt"></i> ENEM</h3>
-                    <p>Muitas faculdades privadas utilizam a nota do ENEM como forma de seleção, oferecendo desde descontos até bolsas integrais.</p>
-                    <p><strong>Vantagem:</strong> Utiliza a mesma prova para múltiplas instituições.</p>
-                    <p><strong>Desafio:</strong> Necessidade de boa performance na prova.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-pen-fancy"></i> Vestibular Próprio</h3>
-                    <p>Processos seletivos organizados pelas próprias instituições, geralmente com provas mais simples que o ENEM.</p>
-                    <p><strong>Vantagem:</strong> Menor concorrência e provas geralmente mais fáceis.</p>
-                    <p><strong>Desafio:</strong> Necessidade de fazer provas específicas para cada instituição.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-hand-holding-usd"></i> Programas de Bolsas</h3>
-                    <p>Programas como ProUni oferecem bolsas integrais e parciais para estudantes de baixa renda baseadas na nota do ENEM.</p>
-                    <p><strong>Vantagem:</strong> Possibilidade de estudar em instituição privada sem custos.</p>
-                    <p><strong>Desafio:</strong> Necessidade de comprovar renda e atingir nota de corte.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="estudos">
-            <h2><i class="fas fa-book"></i> Métodos e Ferramentas de Estudo</h2>
-            <p>Preparar-se para o vestibular de Engenharia exige disciplina e métodos de estudo eficientes. Aqui estão algumas estratégias e recursos recomendados:</p>
-            
-            <h3>Métodos de Estudo Eficazes</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-calendar"></i> Planejamento e Organização</h3>
-                    <p>Crie um cronograma de estudos equilibrado, distribuindo as matérias ao longo da semana. Priorize suas dificuldades mas não negligencie seus pontos fortes.</p>
-                    <p><strong>Dica:</strong> Use a técnica Pomodoro (25min foco, 5min descanso) para manter a concentração.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-pencil-alt"></i> Resolução de Exercícios</h3>
-                    <p>A prática constante de exercícios é essencial, especialmente em matemática e física. Resolva provas anteriores do ENEM e vestibulares específicos.</p>
-                    <p><strong>Dica:</strong> Crie um caderno de erros para revisar onde typically erra.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-users"></i> Estudo em Grupo</h3>
-                    <p>Formar grupos de estudo pode ser muito eficaz para discussão de dúvidas, explicar conceitos e manter a motivação.</p>
-                    <p><strong>Dica:</strong> Escolha pessoas com objetivos similares e niveis de conhecimento complementares.</p>
-                </div>
-            </div>
-            
-            <h3>Plataformas e Recursos Online</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-desktop"></i> Plataformas de Estudo</h3>
-                    <p><strong>Khan Academy:</strong> Videoaulas gratuitas sobre diversos temas de matemática e física.</p>
-                    <p><strong>Stoodi:</strong> Plataforma com cursos preparatórios para ENEM e vestibulares.</p>
-                    <p><strong>Me Salva!:</strong> Videoaulas e exercícios com foco em exatas.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-mobile-alt"></i> Aplicativos Úteis</h3>
-                    <p><strong>Photomath:</strong> Resolve problemas matemáticos mostrando o passo a passo.</p>
-                    <p><strong>Duolingo:</strong> Para praticar inglês, importante para engenharia.</p>
-                    <p><strong>Forest:</strong> Ajuda a manter o foco durante os estudos.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-book"></i> Materiais Impressos</h3>
-                    <p><strong>Coleções específicas:</strong> Livros como "Física Clássica" (Calçada) e "Matemática" (Iezzi) são clássicos.</p>
-                    <p><strong>Apóstilas:</strong> Materiais de cursinhos pré-vestibular são bem direcionados.</p>
-                    <p><strong>Provas anteriores:</strong> Resolver provas antigas é essencial para familiaridade.</p>
-                </div>
-            </div>
-            
-            <h3>Dicas Específicas para Engenharia</h3>
-            <ul>
-                <li><strong>Foco em matemática e física:</strong> São as bases da engenharia e têm peso significativo nos vestibulares.</li>
-                <li><strong>Desenvolva raciocínio lógico:</strong> Pratique resolver problemas complexos e não apenas decorar fórmulas.</li>
-                <li><strong>Melhore sua redação:</strong> Apesar de ser engenharia, a redação tem grande peso no ENEM.</li>
-                <li><strong>Pratique inglês:</strong> A engenharia tem muita terminologia em inglês e materiais técnicos nesse idioma.</li>
-                <li><strong>Familiarize-se com tecnologia:</strong> Conhecimentos básicos de programação e softwares são diferenciais.</li>
-            </ul>
         </section>
         
         <section id="videos">
@@ -980,86 +721,11 @@
                 </div>
                 
                 <div class="card">
-                    <h3><i class="fab fa-youtube"></i> Química</h3>
-                    <p><strong>Química do Amigo:</strong> Abordagem descontraída e eficiente.</p>
-                    <p><strong>Professor Sobis:</strong> Aulas completas e aprofundadas.</p>
-                    <p><strong>Manual do Mundo:</strong> Experimentos e aplicações práticas.</p>
-                </div>
-            </div>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fab fa-youtube"></i> Redação</h3>
-                    <p><strong>Redação e Gramática Zica:</strong> Dicas práticas para redação do ENEM.</p>
-                    <p><strong>Professor Noslen:</strong> Abordagem completa de língua portuguesa.</p>
-                    <p><strong>Descomplica:</strong> Aulas específicas para redação.</p>
-                </div>
-                
-                <div class="card">
                     <h3><i class="fab fa-youtube"></i> Engenharia</h3>
                     <p><strong>Engenharia Detalhada:</strong> Explicações sobre diversas áreas da engenharia.</p>
                     <p><strong>Engenheiro Atual:</strong> Dicas sobre carreira e mercado.</p>
                     <p><strong>Real Engineering (inglês):</strong> Explicações técnicas aprofundadas.</p>
                 </div>
-                
-                <div class="card">
-                    <h3><i class="fab fa-youtube"></i> Canais Gerais</h3>
-                    <p><strong>Khan Academy Brasil:</strong> Videoaulas sobre diversos temas.</p>
-                    <p><strong>Descomplica:</strong> Aulas completas para vestibular.</p>
-                    <p><strong>Curso Enem Gratuito:</strong> Focado especificamente no ENEM.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="vale-apena">
-            <h2><i class="fas fa-check-circle"></i> Vale a Pena Fazer Engenharia Mecânica?</h2>
-            <p>Essa é uma pergunta importante para quem está considerando ingressar na carreira. Vamos analisar os aspectos positivos e desafios da profissão.</p>
-            
-            <h3>Vantagens da Carreira</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-briefcase"></i> Amplo Mercado de Trabalho</h3>
-                    <p>Engenheiros mecânicos podem atuar em diversos setores, desde indústria automotiva até energia, garantindo versatilidade e estabilidade profissional.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-money-bill-wave"></i> Remuneração Atraente</h3>
-                    <p>A engenharia mecânica está entre as profissões com melhores salários no Brasil, especialmente para profissionais experientes e especializados.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-globe"></i> Oportunidades Internacionais</h3>
-                    <p>A formação em engenharia mecânica é valorizada globalmente, abrindo portas para trabalhar em diversos países.</p>
-                </div>
-            </div>
-            
-            <h3>Desafios da Profissão</h3>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3><i class="fas fa-graduation-cap"></i> Curso Exigente</h3>
-                    <p>A graduação em engenharia mecânica é conhecida por sua dificuldade, com alta carga horária e disciplinas complexas.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-sync-alt"></i> Necessidade de Atualização Constante</h3>
-                    <p>O profissional precisa se manter atualizado com as novas tecnologias e tendências do mercado para permanecer competitivo.</p>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-industry"></i> Dependência do Setor Industrial</h3>
-                    <p>O mercado de trabalho para engenheiros mecânicos está diretamente relacionado à saúde da indústria nacional.</p>
-                </div>
-            </div>
-            
-            <h3>Perspectivas Futuras</h3>
-            <p>A Engenharia Mecânica continua sendo uma profissão com excelentes perspectivas para o futuro. Áreas como mobilidade elétrica, energias renováveis, manufatura aditiva e indústria 4.0 estão em expansão e demandarão cada vez mais profissionais qualificados.</p>
-            
-            <p>Além disso, a capacidade de resolver problemas complexos e o pensamento sistêmico desenvolvidos na formação de engenharia são habilidades transferíveis para muitas outras áreas, garantindo versatilidade mesmo em um mercado em transformação.</p>
-            
-            <div class="highlight">
-                <p><strong>Conclusão:</strong> Sim, Engenharia Mecânica vale a pena para quem tem aptidão para exatas, interesse por tecnologia e deseja uma carreira com boas oportunidades e desafios intelectuais. É uma profissão que continuará relevante e necessária, embora em constante evolução.</p>
             </div>
         </section>
         
@@ -1103,6 +769,13 @@
             <p>Site Informativo sobre Engenharia Mecânica</p>
             <p>Desenvolvido para auxiliar estudantes e interessados na área</p>
             <p>© 2023 - Todos os direitos reservados</p>
+            
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#videos"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </footer>
 </body>
